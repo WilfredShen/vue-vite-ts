@@ -1,10 +1,7 @@
-<script setup lang="ts">
-import Home from "./views/Home.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Home />
+  <router-view></router-view>
 </template>
 
 <style lang="scss"></style>
