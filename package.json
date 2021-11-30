@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint ./ --ext .ts,.vue",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "vue": "^3.2.23"

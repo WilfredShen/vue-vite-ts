@@ -21,4 +21,17 @@ module.exports = {
     // "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
   ],
+  rules: {
+    "comma-dangle": [
+      "error",
+      {
+        arrays: "always-multiline",
+        objects: "always-multiline",
+        imports: "always-multiline",
+        exports: "always-multiline",
+        functions: "always-multiline",
+      },
+    ],
+    "vue/multi-word-component-names": "off",
+  },
 };
