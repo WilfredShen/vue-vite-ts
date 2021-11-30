@@ -1,5 +1,15 @@
 /* 格式化原生样式 */
 
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
 html,
 body {
   padding: 0;
@@ -11,14 +21,9 @@ body {
   font-size: 16px;
 }
 
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 4px;
-  height: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 100, 100, 0.5);
+pre,
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 }
 
 a,
