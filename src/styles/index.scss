@@ -1,0 +1,6 @@
+@use "./normalize.scss"; // 首先引入格式化文件
+@use "./variables.scss"; // 引入样式变量
+
+@use "./fonts.scss"; // 引入字体
+
+@use "./custom.scss"; // 最后引入自定义样式
