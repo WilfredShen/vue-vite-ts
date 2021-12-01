@@ -1,31 +1,24 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
-import path from "path";
 
 // https://vitejs.dev/config/
 // eslint-disable-next-line
-export default env => {
+export default ({ mode }) => {
+  const env = loadEnv(mode, process.cwd());
+  const apiServer = "http://api.xxx.com/";
   return defineConfig({
     base: "/",
     plugins: [vue()],
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "src"),
-        "@comp": path.resolve(__dirname, "src/components"),
-        "@styles": path.resolve(__dirname, "src/styles"),
-      },
-    },
     server: {
       open: true,
       proxy: {
-        "/api": {
-          target: "http://dev.api.xxx.com",
+        [env.VITE_BASE_API]: {
+          target: apiServer,
           changeOrigin: true,
-          rewrite: path => path.replace(/^\/api/, ""),
+          rewrite: path => path.replace(`${env.VITE_BASE_API}`, "/"),
         },
       },
     },
-    esbuild: false,
     build: {
       terserOptions: {
         compress: {
