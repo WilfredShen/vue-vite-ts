@@ -22,6 +22,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
+    "@typescript-eslint/no-unused-vars": ["error"],
     "comma-dangle": [
       "error",
       {
