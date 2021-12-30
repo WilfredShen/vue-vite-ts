@@ -11,7 +11,7 @@
     "jsx": "preserve",
     "useDefineForClassFields": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "element-plus/global"]
+    "types": ["vite/client"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
